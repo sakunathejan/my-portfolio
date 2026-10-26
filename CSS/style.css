@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+/* Custom styles if needed */
+        .text-heading {
+            color: #ededea;
+        }
+
+        /* Ensure that custom fonts are applied correctly by Tailwind */
+        .font-\[DM_Sans\] {
+            font-family: "DM Sans", sans-serif;
+        }
+
+        .font-\[Bricolage_Grotesque\] {
+            font-family: "Bricolage Grotesque", sans-serif;
+        }
+

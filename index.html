@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS CDN (Using JIT mode for latest features, ensure it's processed if using a build step) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#0E0F13] text-[#EDEDEA] font-[DM_Sans] font-bold">
+    <!-- Nav Bar Section -->
+    <nav
+        class="main-nav-container fixed top-0 left-0 w-full z-50 bg-[#0E0F13]/90 backdrop-blur-md border-b border-white/10 text-[#EDEDEA] font-[DM_Sans]">
+        <div class="max-w-screen-2xl mx-auto flex flex-wrap items-center justify-between p-4">
+            <!-- Logo -->
+            <a href="./index.html" class="flex items-center space-x-3">
+                <span class="text-2xl font-bold tracking-wide whitespace-nowrap">
+                    SAKUNA<span class="text-[#C6F432]">.</span>
+                </span>
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-white/10 text-[#EDEDEA] transition duration-300 hover:bg-[#C6F432] hover:text-[#0E0F13] md:hidden"
+                aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
+                <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5 7h14M5 12h14M5 17h14" />
+                </svg>
+            </button>
+
+            <!-- Navigation Links -->
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="flex flex-col gap-2 mt-4 md:flex-row md:items-center md:gap-2 md:mt-0">
+                    <li>
+                        <a href="#work"
+                            class="inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium text-[#EDEDEA]/80 transition duration-300 ease-in-out hover:bg-[#C6F432] hover:text-[#0E0F13]">
+                            Work
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services"
+                            class="inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium text-[#EDEDEA]/80 transition duration-300 ease-in-out hover:bg-[#C6F432] hover:text-[#0E0F13]">
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about"
+                            class="inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium text-[#EDEDEA]/80 transition duration-300 ease-in-out hover:bg-[#C6F432] hover:text-[#0E0F13]">
+                            About
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="main-hero-container pt-20">
+        <div class="relative w-full h-[86vh] overflow-hidden">
+            <!-- Background Video -->
+            <video class="absolute top-0 left-0 w-full h-full object-cover z-0" autoplay muted loop playsinline>
+                <source src="./Assets/hero-vedio.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+
+            <!-- Video Overlay -->
+            <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"></div>
+
+            <!-- Foreground Content -->
+            <div class="relative max-w-screen-xl mx-auto p-4 h-full flex flex-col justify-center z-20 text-white">
+                <div class="typo-section">
+                    <h6
+                        class="inline-flex items-center space-x-2 text-sm text-[#C6F432] bg-[#C6F432]/10 px-4 py-2 rounded-full border border-[#C6F432]/30 uppercase tracking-wider mb-5">
+                        <span>Available for new projects</span>
+                    </h6>
+                    <p
+                        class="font-[Bricolage_Grotesque] font-bold text-5xl md:text-6xl lg:text-7xl leading-tight max-w-4xl">
+                        Hi, I’m Sakuna <br />
+                        Thejan.<br />I build
+                        <span class="text-[#C6F432]">software <br />and web applications</span>
+                        <br />that solve real-world <br />problems.
+                    </p>
+
+                    <!-- Supporting Text -->
+                    <p class="mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300">
+                        I work across Java and modern web technologies to turn ideas into
+                        useful software and digital experiences.
+                    </p>
+
+                    <!-- Action Buttons -->
+                    <div class="mt-8 flex flex-wrap items-center gap-4">
+                        <a href="#work"
+                            class="inline-flex items-center gap-2 rounded-full bg-[#C6F432] px-7 py-3.5 font-bold text-[#0E0F13] transition duration-300 hover:scale-105">
+                            Explore My Work
+                            <span aria-hidden="true">↗</span>
+                        </a>
+
+                        <a href="#contact"
+                            class="inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-3.5 font-medium text-white transition duration-300 hover:border-[#C6F432] hover:text-[#C6F432]">
+                            Let's Connect
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Work Grid -->
+        <div id="my-work-container">
+
+            <!DOCTYPE html>
+            <html lang="en">
+
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+                <title>Selected Work | Portfolio</title>
+
+                <!-- Tailwind CSS -->
+                <script src="https://cdn.tailwindcss.com"></script>
+            </head>
+
+            <body class="bg-[#0E0F13] text-[#EDEDEA]">
+
+                <!-- Projects Section -->
+                <section id="projects" class="min-h-screen px-6 py-20 md:px-10 lg:px-16">
+
+                    <div class="max-w-7xl mx-auto">
+
+                        <!-- Section Header -->
+                        <div class="mb-14">
+
+                            <div class="flex items-center gap-3 mb-5">
+                                <span class="w-2 h-2 rounded-full bg-[#C6F432]"></span>
+
+                                <p class="text-sm uppercase tracking-[0.25em] text-[#A9A9A4]">
+                                    Selected Work
+                                </p>
+                            </div>
+
+                            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+
+                                <div>
+                                    <h1 class="text-5xl md:text-7xl font-bold tracking-tight">
+                                        Things I've
+                                        <span class="text-[#C6F432]">built.</span>
+                                    </h1>
+
+                                    <p class="mt-5 max-w-xl text-base md:text-lg leading-relaxed text-[#A9A9A4]">
+                                        A collection of projects, experiments, and ideas
+                                        I've brought to life while growing as a software
+                                        engineer.
+                                    </p>
+                                </div>
+
+                                <p class="text-sm text-[#A9A9A4]">
+                                    <span class="text-[#EDEDEA]">03</span>
+                                    &nbsp; Projects
+                                </p>
+
+                            </div>
+                        </div>
+
+
+                        <!-- Projects Grid -->
+                        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+
+                        </div>
+
+
+                        <!-- Bottom Section -->
+                        <div class="mt-12 flex flex-col sm:flex-row
+                        items-start sm:items-center justify-between gap-4
+                        border-t border-white/10 pt-7">
+
+                            <p class="text-sm text-[#A9A9A4]">
+                                Always building. Always learning.
+                            </p>
+
+                            <a href="#" class="text-sm font-medium text-[#C6F432] hover:text-[#EDEDEA] transition">
+                                Explore more on GitHub ↗
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </body>
+
+            </html>
+
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script src="./JS/app.js"></script>
+</body>
+
+</html>

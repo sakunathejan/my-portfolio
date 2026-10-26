@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sakuna | Portfolio</title>
+
+    
+</head>
+
+<body style="margin: 0;">
+
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+
+        <img src="./Assets/logo.svg" alt="Sakuna Logo">
+
+        <div class="loader"></div>
+
+    </div>
+
+    <!-- Main Website Content -->
+    <div id="app-content" style="display: none;">
+
+        <!-- Put your existing portfolio HTML here.
+             Include your navbar, hero section,
+             and all other website sections. -->
+
+             <h1>Hi</h1>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const splash = document.getElementById("splash-screen");
+        const app = document.getElementById("app-content");
+
+        const startTime = Date.now();
+        const minimumDuration = 5000;
+
+        window.addEventListener("load", () => {
+
+            const elapsed = Date.now() - startTime;
+            const remainingTime = Math.max(
+                0,
+                minimumDuration - elapsed
+            );
+
+            setTimeout(() => {
+
+                // Show the website
+                app.style.display = "block";
+
+                // Fade out the splash screen
+                splash.classList.add("hide");
+
+                // Remove splash screen after transition
+                setTimeout(() => {
+                    splash.remove();
+                }, 5000);
+
+            }, remainingTime);
+
+        });
+    </script>
+
+</body>
+</html>
