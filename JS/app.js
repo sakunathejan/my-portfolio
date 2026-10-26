@@ -1,4 +1,5 @@
 let myWork = document.getElementById("projects-grid");
+let myWorkBottomSection = document.getElementById("bottom-section");
 
 function formatRepoName(repoName) {
     return repoName.replace(/-/g, " ").replace(/\b\w/g, char => char.toUpperCase());
@@ -122,8 +123,21 @@ fetch("https://api.github.com/users/sakunathejan/repos?sort=created&direction=de
                 </a>
 
             </article>          
-        `;
+        `;       
+
     });
+
+    fetch("https://api.github.com/users/sakunathejan").then(res => res.json()).then(data => {
+        
+        myWorkBottomSection.innerHTML += `
+            
+            <a href="${data.html_url}" class="text-sm font-medium text-[#C6F432] hover:text-[#EDEDEA] transition">
+                Explore more on GitHub ↗
+            </a>
+        `
+    })
+
+
 });
 
 
