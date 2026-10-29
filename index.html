@@ -4,17 +4,18 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="./CSS/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
         href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap"
         rel="stylesheet" />
-    <!-- Tailwind CSS CDN (Using JIT mode for latest features, ensure it's processed if using a build step) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-[#0E0F13] text-[#EDEDEA] font-[DM_Sans] font-bold">
+
     <!-- Nav Bar Section -->
     <nav
         class="main-nav-container fixed top-0 left-0 w-full z-50 bg-[#0E0F13]/90 backdrop-blur-md border-b border-white/10 text-[#EDEDEA] font-[DM_Sans]">
@@ -41,7 +42,7 @@
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
                 <ul class="flex flex-col gap-2 mt-4 md:flex-row md:items-center md:gap-2 md:mt-0">
                     <li>
-                        <a href="#work"
+                        <a href="#my-work-container"
                             class="inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium text-[#EDEDEA]/80 transition duration-300 ease-in-out hover:bg-[#C6F432] hover:text-[#0E0F13]">
                             Work
                         </a>
@@ -115,94 +116,147 @@
             </div>
         </div>
 
-        <!-- Work Grid -->
-        <div id="my-work-container">
+        <!-- Tech Stack -->
+        <div class="max-w-screen">
+            <section class="mqs-08" aria-label="Technology stack">
+                <div class="mqs-08__inner">
 
-            <!DOCTYPE html>
-            <html lang="en">
-
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-                <title>Selected Work | Portfolio</title>
-
-                <!-- Tailwind CSS -->
-                <script src="https://cdn.tailwindcss.com"></script>
-            </head>
-
-            <body class="bg-[#0E0F13] text-[#EDEDEA]">
-
-                <!-- Projects Section -->
-                <section id="projects" class="min-h-screen px-6 py-20 md:px-10 lg:px-16">
-
-                    <div class="max-w-7xl mx-auto">
-
-                        <!-- Section Header -->
-                        <div class="mb-14">
-
-                            <div class="flex items-center gap-3 mb-5">
-                                <span class="w-2 h-2 rounded-full bg-[#C6F432]"></span>
-
-                                <p class="text-sm uppercase tracking-[0.25em] text-[#A9A9A4]">
-                                    Selected Work
-                                </p>
-                            </div>
-
-                            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-
-                                <div>
-                                    <h1 class="text-5xl md:text-7xl font-bold tracking-tight">
-                                        Things I've
-                                        <span class="text-[#C6F432]">built.</span>
-                                    </h1>
-
-                                    <p class="mt-5 max-w-xl text-base md:text-lg leading-relaxed text-[#A9A9A4]">
-                                        A collection of projects, experiments, and ideas
-                                        I've brought to life while growing as a software
-                                        engineer.
-                                    </p>
-                                </div>
-
-                                <p class="text-sm text-[#A9A9A4]">
-                                    <span class="text-[#EDEDEA]">03</span>
-                                    &nbsp; Projects
-                                </p>
-
-                            </div>
+                    <!-- <div class="mqs-08__head">
+                        <div>
+                            <p class="mqs-08__eyebrow">MY TOOLKIT</p>
+                            <h3 class="mqs-08__title">Tools I'm building with<span>.</span></h3>
                         </div>
 
+                        <input class="mqs-08__revBox" type="checkbox" id="mqs-08-rev">
+                        <label class="mqs-08__revBtn" for="mqs-08-rev"><span>⇄</span> Reverse</label>
+                    </div> -->
 
-                        <!-- Projects Grid -->
-                        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                    <ul class="mqs-08__srList">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Tailwind CSS</li>
+                        <li>Java</li>
+                        <li>MySQL</li>
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>MongoDB</li>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>REST APIs</li>
+                    </ul>
 
+                    <div class="mqs-08__rail" aria-hidden="true">
 
+                        <div class="mqs-08__group">
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">Ht</span>HTML</span>
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">Cs</span>CSS</span>
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">Js</span>JavaScript</span>
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">Tw</span>Tailwind CSS</span>
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">Ja</span>Java</span>
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">My</span>MySQL</span>
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">Re</span>React</span>
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">No</span>Node.js</span>
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">Ex</span>Express.js</span>
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">Mo</span>MongoDB</span>
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">Gi</span>Git</span>
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">GH</span>GitHub</span>
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">API</span>REST APIs</span>
                         </div>
 
-
-                        <!-- Bottom Section -->
-                        <div id="bottom-section" class="mt-12 flex flex-col sm:flex-row
-                        items-start sm:items-center justify-between gap-4
-                        border-t border-white/10 pt-7">
-
-                            <p class="text-sm text-[#A9A9A4]">
-                                Always building. Always learning.
-                            </p>
-
-                            
-
+                        <div class="mqs-08__group">
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">Ht</span>HTML</span>
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">Cs</span>CSS</span>
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">Js</span>JavaScript</span>
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">Tw</span>Tailwind CSS</span>
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">Ja</span>Java</span>
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">My</span>MySQL</span>
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">Re</span>React</span>
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">No</span>Node.js</span>
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">Ex</span>Express.js</span>
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">Mo</span>MongoDB</span>
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">Gi</span>Git</span>
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">GH</span>GitHub</span>
+                            <span class="mqs-08__chip"><span class="mqs-08__tile">API</span>REST APIs</span>
                         </div>
 
                     </div>
 
-                </section>
+                    <!-- <p class="mqs-08__foot"><span></span> LEARNING · BUILDING · IMPROVING</p> -->
 
-            </body>
-
-            </html>
-
-
+                </div>
+            </section>
         </div>
+
+        <!-- Work Grid -->
+        <div id="my-work-container">
+            <!-- Projects Section -->
+            <section id="projects" class=" px-6 pt-20 pb-4 md:px-10 lg:px-16">
+
+                <div class="max-w-screen mx-auto">
+
+                    <!-- Section Header -->
+                    <div class="mb-14">
+
+                        <div class="flex items-center gap-3 mb-5">
+                            <span class="w-2 h-2 rounded-full bg-[#C6F432]"></span>
+
+                            <p class="text-sm uppercase tracking-[0.25em] text-[#A9A9A4]">
+                                Selected Work
+                            </p>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+
+                            <div>
+                                <h1 class="text-5xl md:text-7xl font-bold tracking-tight">
+                                    Things I've
+                                    <span class="text-[#C6F432]">built.</span>
+                                </h1>
+
+                                <p class="mt-5 max-w-xl text-base md:text-lg leading-relaxed text-[#A9A9A4]">
+                                    A collection of projects, experiments, and ideas
+                                    I've brought to life while growing as a software
+                                    engineer.
+                                </p>
+                            </div>
+
+                            <p class="text-sm text-[#A9A9A4]">
+                                <span class="text-[#EDEDEA]">03</span>
+                                &nbsp; Projects
+                            </p>
+
+                        </div>
+                    </div>
+
+
+                    <!-- Projects Grid -->
+                    <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+
+                    </div>
+
+
+                    <!-- Bottom Section -->
+                    <div id="bottom-section" class="mt-12 flex flex-col sm:flex-row
+                        items-start sm:items-center justify-between gap-4
+                        border-t border-white/10 pt-7">
+
+                        <p class="text-sm text-[#A9A9A4]">
+                            Always building. Always learning.
+                        </p>
+
+
+
+                    </div>
+
+                </div>
+
+            </section>
+        </div>
+
+        
 
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <script src="./JS/app.js"></script>
