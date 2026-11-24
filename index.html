@@ -1,64 +1,109 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Sakuna Thejan | Portfolio</title>
     <link rel="stylesheet" href="./CSS/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <!-- Devicon Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <!-- Tailwind CSS Play CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-[#0E0F13] text-[#EDEDEA] font-[DM_Sans] font-bold">
+<body class="bg-[#0E0F13] text-[#EDEDEA] font-[DM_Sans] antialiased selection:bg-[#C6F432] selection:text-[#0E0F13]">
 
     <!-- Nav Bar Section -->
     <nav
         class="main-nav-container fixed top-0 left-0 w-full z-50 bg-[#0E0F13]/90 backdrop-blur-md border-b border-white/10 text-[#EDEDEA] font-[DM_Sans]">
-        <div class="max-w-screen-2xl mx-auto flex flex-wrap items-center justify-between p-4">
+        <div class="max-w-screen-2xl mx-auto flex flex-wrap items-center justify-between p-4 px-6 md:px-10">
             <!-- Logo -->
-            <a href="./index.html" class="flex items-center space-x-3">
-                <span class="text-2xl font-bold tracking-wide whitespace-nowrap">
+            <a href="./index.html" class="flex items-center space-x-2 group">
+                <span class="text-2xl font-bold tracking-wide transition duration-300 group-hover:text-[#C6F432]">
                     SAKUNA<span class="text-[#C6F432]">.</span>
                 </span>
             </a>
 
-            <!-- Mobile Menu Button -->
-            <button data-collapse-toggle="navbar-default" type="button"
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" type="button"
                 class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-white/10 text-[#EDEDEA] transition duration-300 hover:bg-[#C6F432] hover:text-[#0E0F13] md:hidden"
-                aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
-                <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M5 7h14M5 12h14M5 17h14" />
+                aria-label="Toggle navigation">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </button>
 
-            <!-- Navigation Links -->
-            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-                <ul class="flex flex-col gap-2 mt-4 md:flex-row md:items-center md:gap-2 md:mt-0">
+            <!-- Desktop Navigation Links -->
+            <div class="hidden w-full md:flex md:w-auto md:items-center md:gap-3" id="navbar-desktop">
+                <ul class="flex flex-col gap-2 mt-4 md:flex-row md:items-center md:gap-1 md:mt-0 text-sm font-medium">
                     <li>
-                        <a href="#my-work-container"
-                            class="inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium text-[#EDEDEA]/80 transition duration-300 ease-in-out hover:bg-[#C6F432] hover:text-[#0E0F13]">
+                        <a href="#projects"
+                            class="inline-flex items-center px-4 py-2 rounded-full text-[#EDEDEA]/80 transition duration-300 ease-in-out hover:bg-[#C6F432] hover:text-[#0E0F13]">
                             Work
                         </a>
                     </li>
-
                     <li>
                         <a href="#services"
-                            class="inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium text-[#EDEDEA]/80 transition duration-300 ease-in-out hover:bg-[#C6F432] hover:text-[#0E0F13]">
+                            class="inline-flex items-center px-4 py-2 rounded-full text-[#EDEDEA]/80 transition duration-300 ease-in-out hover:bg-[#C6F432] hover:text-[#0E0F13]">
                             Services
                         </a>
                     </li>
-
                     <li>
                         <a href="#about"
-                            class="inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium text-[#EDEDEA]/80 transition duration-300 ease-in-out hover:bg-[#C6F432] hover:text-[#0E0F13]">
+                            class="inline-flex items-center px-4 py-2 rounded-full text-[#EDEDEA]/80 transition duration-300 ease-in-out hover:bg-[#C6F432] hover:text-[#0E0F13]">
                             About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact"
+                            class="inline-flex items-center px-4 py-2 rounded-full text-[#EDEDEA]/80 transition duration-300 ease-in-out hover:bg-[#C6F432] hover:text-[#0E0F13]">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Desktop CTA -->
+                <a href="#contact"
+                    class="ml-3 inline-flex items-center gap-1.5 rounded-full bg-[#C6F432] px-5 py-2 text-xs font-bold text-[#0E0F13] transition duration-300 hover:bg-[#b0dc24] hover:scale-105">
+                    Let's Talk
+                    <span>↗</span>
+                </a>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu"
+                class="hidden w-full mt-3 p-4 bg-[#15161B] border border-white/10 rounded-2xl md:hidden transition-all duration-300">
+                <ul class="flex flex-col gap-2 text-sm font-medium">
+                    <li>
+                        <a href="#projects" class="mobile-nav-link block p-2.5 rounded-lg text-gray-300 hover:bg-[#C6F432] hover:text-[#0E0F13] transition">
+                            Work
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services" class="mobile-nav-link block p-2.5 rounded-lg text-gray-300 hover:bg-[#C6F432] hover:text-[#0E0F13] transition">
+                            Services
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" class="mobile-nav-link block p-2.5 rounded-lg text-gray-300 hover:bg-[#C6F432] hover:text-[#0E0F13] transition">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="mobile-nav-link block p-2.5 rounded-lg text-gray-300 hover:bg-[#C6F432] hover:text-[#0E0F13] transition">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="pt-2 border-t border-white/10">
+                        <a href="#contact" class="mobile-nav-link block text-center p-2.5 rounded-full bg-[#C6F432] text-[#0E0F13] font-bold">
+                            Let's Talk ↗
                         </a>
                     </li>
                 </ul>
@@ -67,8 +112,8 @@
     </nav>
 
     <!-- Hero Section -->
-    <div class="main-hero-container pt-20">
-        <div class="relative w-full h-[86vh] overflow-hidden">
+    <header class="main-hero-container pt-20">
+        <div class="relative w-full min-h-[86vh] overflow-hidden flex items-center">
             <!-- Background Video -->
             <video class="absolute top-0 left-0 w-full h-full object-cover z-0" autoplay muted loop playsinline>
                 <source src="./Assets/hero-vedio.mp4" type="video/mp4" />
@@ -76,22 +121,27 @@
             </video>
 
             <!-- Video Overlay -->
-            <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"></div>
+            <div class="absolute top-0 left-0 w-full h-full bg-[#0E0F13]/70 backdrop-blur-[2px] z-10"></div>
 
             <!-- Foreground Content -->
-            <div class="relative max-w-screen-xl mx-auto p-4 h-full flex flex-col justify-center z-20 text-white">
-                <div class="typo-section">
-                    <h6
-                        class="inline-flex items-center space-x-2 text-sm text-[#C6F432] bg-[#C6F432]/10 px-4 py-2 rounded-full border border-[#C6F432]/30 uppercase tracking-wider mb-5">
-                        <span>Available for new projects</span>
-                    </h6>
-                    <p
-                        class="font-[Bricolage_Grotesque] font-bold text-5xl md:text-6xl lg:text-7xl leading-tight max-w-4xl">
+            <div class="relative max-w-screen-2xl mx-auto p-6 md:p-10 w-full flex flex-col justify-center z-20 text-white">
+                <div class="typo-section max-w-4xl">
+                    <!-- Status Badge -->
+                    <div class="mb-4">
+                        <span
+                            class="inline-flex items-center gap-2 text-xs md:text-sm text-[#C6F432] bg-[#C6F432]/10 px-4 py-1.5 rounded-full border border-[#C6F432]/30 uppercase tracking-wider font-semibold">
+                            <span class="w-2 h-2 rounded-full bg-[#C6F432] animate-pulse"></span>
+                            Available for new projects
+                        </span>
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1 class="font-[Bricolage_Grotesque] font-bold text-4xl sm:text-6xl lg:text-7xl leading-tight">
                         Hi, I’m Sakuna <br />
                         Thejan.<br />I build
-                        <span class="text-[#C6F432]">software <br />and web applications</span>
-                        <br />that solve real-world <br />problems.
-                    </p>
+                        <span class="text-[#C6F432]">software <br class="hidden sm:inline" />and web applications</span>
+                        that solve real-world problems.
+                    </h1>
 
                     <!-- Supporting Text -->
                     <p class="mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300">
@@ -101,165 +151,585 @@
 
                     <!-- Action Buttons -->
                     <div class="mt-8 flex flex-wrap items-center gap-4">
-                        <a href="#work"
-                            class="inline-flex items-center gap-2 rounded-full bg-[#C6F432] px-7 py-3.5 font-bold text-[#0E0F13] transition duration-300 hover:scale-105">
+                        <a href="#projects"
+                            class="inline-flex items-center gap-2 rounded-full bg-[#C6F432] px-7 py-3.5 font-bold text-[#0E0F13] transition duration-300 hover:scale-105 hover:bg-[#b0dc24] text-sm md:text-base">
                             Explore My Work
                             <span aria-hidden="true">↗</span>
                         </a>
 
                         <a href="#contact"
-                            class="inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-3.5 font-medium text-white transition duration-300 hover:border-[#C6F432] hover:text-[#C6F432]">
+                            class="inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-3.5 font-medium text-white transition duration-300 hover:border-[#C6F432] hover:text-[#C6F432] text-sm md:text-base">
                             Let's Connect
                         </a>
                     </div>
                 </div>
             </div>
         </div>
+    </header>
 
-        <!-- Tech Stack -->
-        <div class="max-w-screen">
-            <section class="mqs-08" aria-label="Technology stack">
-                <div class="mqs-08__inner">
+    <!-- Tech Stack Marquee -->
+    <div class="max-w-screen border-y border-white/10">
+        <section class="mqs-08" aria-label="Technology stack">
+            <div class="mqs-08__inner">
+                <ul class="mqs-08__srList">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Tailwind CSS</li>
+                    <li>Java</li>
+                    <li>MySQL</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>Express.js</li>
+                    <li>MongoDB</li>
+                    <li>Git</li>
+                    <li>GitHub</li>
+                    <li>REST APIs</li>
+                </ul>
 
-                    <!-- <div class="mqs-08__head">
-                        <div>
-                            <p class="mqs-08__eyebrow">MY TOOLKIT</p>
-                            <h3 class="mqs-08__title">Tools I'm building with<span>.</span></h3>
-                        </div>
-
-                        <input class="mqs-08__revBox" type="checkbox" id="mqs-08-rev">
-                        <label class="mqs-08__revBtn" for="mqs-08-rev"><span>⇄</span> Reverse</label>
-                    </div> -->
-
-                    <ul class="mqs-08__srList">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>Tailwind CSS</li>
-                        <li>Java</li>
-                        <li>MySQL</li>
-                        <li>React</li>
-                        <li>Node.js</li>
-                        <li>Express.js</li>
-                        <li>MongoDB</li>
-                        <li>Git</li>
-                        <li>GitHub</li>
-                        <li>REST APIs</li>
-                    </ul>
-
-                    <div class="mqs-08__rail" aria-hidden="true">
-
-                        <div class="mqs-08__group">
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">Ht</span>HTML</span>
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">Cs</span>CSS</span>
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">Js</span>JavaScript</span>
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">Tw</span>Tailwind CSS</span>
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">Ja</span>Java</span>
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">My</span>MySQL</span>
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">Re</span>React</span>
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">No</span>Node.js</span>
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">Ex</span>Express.js</span>
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">Mo</span>MongoDB</span>
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">Gi</span>Git</span>
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">GH</span>GitHub</span>
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">API</span>REST APIs</span>
-                        </div>
-
-                        <div class="mqs-08__group">
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">Ht</span>HTML</span>
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">Cs</span>CSS</span>
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">Js</span>JavaScript</span>
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">Tw</span>Tailwind CSS</span>
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">Ja</span>Java</span>
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">My</span>MySQL</span>
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">Re</span>React</span>
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">No</span>Node.js</span>
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">Ex</span>Express.js</span>
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">Mo</span>MongoDB</span>
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">Gi</span>Git</span>
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">GH</span>GitHub</span>
-                            <span class="mqs-08__chip"><span class="mqs-08__tile">API</span>REST APIs</span>
-                        </div>
-
+                <div class="mqs-08__rail" aria-hidden="true">
+                    <div class="mqs-08__group">
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Ht</span>HTML</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Cs</span>CSS</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Js</span>JavaScript</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Tw</span>Tailwind CSS</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Ja</span>Java</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">My</span>MySQL</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Re</span>React</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">No</span>Node.js</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Ex</span>Express.js</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Mo</span>MongoDB</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Gi</span>Git</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">GH</span>GitHub</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">API</span>REST APIs</span>
                     </div>
 
-                    <!-- <p class="mqs-08__foot"><span></span> LEARNING · BUILDING · IMPROVING</p> -->
+                    <div class="mqs-08__group">
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Ht</span>HTML</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Cs</span>CSS</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Js</span>JavaScript</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Tw</span>Tailwind CSS</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Ja</span>Java</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">My</span>MySQL</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Re</span>React</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">No</span>Node.js</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Ex</span>Express.js</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Mo</span>MongoDB</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Gi</span>Git</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">GH</span>GitHub</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">API</span>REST APIs</span>
+                    </div>
 
+                    <div class="mqs-08__group">
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Ht</span>HTML</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Cs</span>CSS</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Js</span>JavaScript</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Tw</span>Tailwind CSS</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Ja</span>Java</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">My</span>MySQL</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Re</span>React</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">No</span>Node.js</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Ex</span>Express.js</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Mo</span>MongoDB</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">Gi</span>Git</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">GH</span>GitHub</span>
+                        <span class="mqs-08__chip"><span class="mqs-08__tile">API</span>REST APIs</span>
+                    </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
+    </div>
 
-        <!-- Work Grid -->
-        <div id="my-work-container">
-            <!-- Projects Section -->
-            <section id="projects" class=" px-6 pt-20 pb-4 md:px-10 lg:px-16">
+    <!-- Main Content Area -->
+    <main>
+        <!-- Selected Work / Projects Section -->
+        <section id="projects" class="px-6 py-20 md:px-10 lg:px-16">
+            <div class="max-w-screen-2xl mx-auto">
+                <!-- Section Header -->
+                <div class="mb-14">
+                    <div class="flex items-center gap-3 mb-5">
+                        <span class="w-2.5 h-2.5 rounded-full bg-[#C6F432]"></span>
+                        <p class="text-xs uppercase tracking-[0.25em] text-[#A9A9A4] font-semibold">
+                            Selected Work
+                        </p>
+                    </div>
 
-                <div class="max-w-screen mx-auto">
-
-                    <!-- Section Header -->
-                    <div class="mb-14">
-
-                        <div class="flex items-center gap-3 mb-5">
-                            <span class="w-2 h-2 rounded-full bg-[#C6F432]"></span>
-
-                            <p class="text-sm uppercase tracking-[0.25em] text-[#A9A9A4]">
-                                Selected Work
+                    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+                        <div>
+                            <h2 class="font-[Bricolage_Grotesque] text-4xl md:text-6xl font-bold tracking-tight">
+                                Things I've <span class="text-[#C6F432]">built.</span>
+                            </h2>
+                            <p class="mt-4 max-w-xl text-base md:text-lg leading-relaxed text-[#A9A9A4]">
+                                A collection of projects, experiments, and applications
+                                I've brought to life while growing as a software engineer.
                             </p>
                         </div>
 
-                        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+                        <p class="text-sm text-[#A9A9A4] font-medium">
+                            <span class="text-[#C6F432] font-bold">Featured</span> &nbsp; Repositories
+                        </p>
+                    </div>
+                </div>
 
+                <!-- Projects Grid (Loaded Dynamically via JavaScript) -->
+                <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                    <!-- Loading skeleton / Fallback placeholder -->
+                    <div class="p-8 rounded-2xl border border-white/10 bg-[#111217] text-center text-gray-400">
+                        <div class="animate-spin w-8 h-8 border-2 border-[#C6F432] border-t-transparent rounded-full mx-auto mb-4"></div>
+                        <p class="text-sm">Fetching latest projects from GitHub...</p>
+                    </div>
+                </div>
+
+                <!-- Bottom Section -->
+                <div id="bottom-section"
+                    class="mt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-white/10 pt-7">
+                    <p class="text-sm text-[#A9A9A4]">
+                        Always building. Always learning.
+                    </p>
+                    <!-- Filled by JavaScript with Github link -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="px-6 py-20 md:px-10 lg:px-16 bg-[#111217]/50 border-t border-white/10">
+            <div class="max-w-screen-2xl mx-auto">
+                <!-- Section Header -->
+                <div class="mb-14">
+                    <div class="flex items-center gap-3 mb-5">
+                        <span class="w-2.5 h-2.5 rounded-full bg-[#C6F432]"></span>
+                        <p class="text-xs uppercase tracking-[0.25em] text-[#A9A9A4] font-semibold">
+                            What I Offer
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+                        <div>
+                            <h2 class="font-[Bricolage_Grotesque] text-4xl md:text-6xl font-bold tracking-tight">
+                                Services & <span class="text-[#C6F432]">Expertise.</span>
+                            </h2>
+                            <p class="mt-4 max-w-xl text-base md:text-lg leading-relaxed text-[#A9A9A4]">
+                                Combining clean code, practical engineering, and intuitive design to create dependable software solutions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Service 1: Web Development -->
+                    <article class="p-7 rounded-2xl border border-white/[0.08] bg-[#111217] hover:border-[#C6F432]/50 hover:-translate-y-2 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-xl bg-[#C6F432]/10 border border-[#C6F432]/20 flex items-center justify-center text-[#C6F432] text-2xl mb-6 group-hover:scale-110 group-hover:bg-[#C6F432] group-hover:text-[#0E0F13] transition-all duration-300">
+                            <i class="devicon-html5-plain"></i>
+                        </div>
+                        <h3 class="font-[Bricolage_Grotesque] text-xl font-bold text-[#EDEDEA] group-hover:text-[#C6F432] transition">
+                            Frontend Web Development
+                        </h3>
+                        <p class="mt-3 text-sm leading-relaxed text-[#A9A9A4]">
+                            Building fast, responsive, and mobile-friendly websites using modern HTML5, clean CSS/Tailwind, and vanilla JavaScript for smooth user experiences.
+                        </p>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-white/5 border border-white/10 text-gray-300">HTML5</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-white/5 border border-white/10 text-gray-300">Tailwind CSS</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-white/5 border border-white/10 text-gray-300">JavaScript</span>
+                        </div>
+                    </article>
+
+                    <!-- Service 2: Java & OOP Development -->
+                    <article class="p-7 rounded-2xl border border-white/[0.08] bg-[#111217] hover:border-[#C6F432]/50 hover:-translate-y-2 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-xl bg-[#C6F432]/10 border border-[#C6F432]/20 flex items-center justify-center text-[#C6F432] text-2xl mb-6 group-hover:scale-110 group-hover:bg-[#C6F432] group-hover:text-[#0E0F13] transition-all duration-300">
+                            <i class="devicon-java-plain"></i>
+                        </div>
+                        <h3 class="font-[Bricolage_Grotesque] text-xl font-bold text-[#EDEDEA] group-hover:text-[#C6F432] transition">
+                            Java & Desktop Software
+                        </h3>
+                        <p class="mt-3 text-sm leading-relaxed text-[#A9A9A4]">
+                            Developing object-oriented standalone and desktop applications using Java, layered architecture, design patterns, and modular project structures.
+                        </p>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-white/5 border border-white/10 text-gray-300">Java</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-white/5 border border-white/10 text-gray-300">OOP</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-white/5 border border-white/10 text-gray-300">Layered Arch</span>
+                        </div>
+                    </article>
+
+                    <!-- Service 3: Database & MySQL -->
+                    <article class="p-7 rounded-2xl border border-white/[0.08] bg-[#111217] hover:border-[#C6F432]/50 hover:-translate-y-2 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-xl bg-[#C6F432]/10 border border-[#C6F432]/20 flex items-center justify-center text-[#C6F432] text-2xl mb-6 group-hover:scale-110 group-hover:bg-[#C6F432] group-hover:text-[#0E0F13] transition-all duration-300">
+                            <i class="devicon-mysql-plain"></i>
+                        </div>
+                        <h3 class="font-[Bricolage_Grotesque] text-xl font-bold text-[#EDEDEA] group-hover:text-[#C6F432] transition">
+                            Database Design & Management
+                        </h3>
+                        <p class="mt-3 text-sm leading-relaxed text-[#A9A9A4]">
+                            Designing normalized relational databases with MySQL, writing optimized SQL queries, and integrating structured data with application logic.
+                        </p>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-white/5 border border-white/10 text-gray-300">MySQL</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-white/5 border border-white/10 text-gray-300">Relational DB</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-white/5 border border-white/10 text-gray-300">CRUD Operations</span>
+                        </div>
+                    </article>
+
+                    <!-- Service 4: REST APIs & Integration -->
+                    <article class="p-7 rounded-2xl border border-white/[0.08] bg-[#111217] hover:border-[#C6F432]/50 hover:-translate-y-2 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-xl bg-[#C6F432]/10 border border-[#C6F432]/20 flex items-center justify-center text-[#C6F432] text-2xl mb-6 group-hover:scale-110 group-hover:bg-[#C6F432] group-hover:text-[#0E0F13] transition-all duration-300">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-[Bricolage_Grotesque] text-xl font-bold text-[#EDEDEA] group-hover:text-[#C6F432] transition">
+                            API Integration & Asynchronous JS
+                        </h3>
+                        <p class="mt-3 text-sm leading-relaxed text-[#A9A9A4]">
+                            Connecting frontend user interfaces to backend and 3rd party RESTful APIs using modern asynchronous JavaScript (`fetch`, `async/await`, JSON parsing).
+                        </p>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-white/5 border border-white/10 text-gray-300">REST APIs</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-white/5 border border-white/10 text-gray-300">Fetch API</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-white/5 border border-white/10 text-gray-300">JSON</span>
+                        </div>
+                    </article>
+
+                    <!-- Service 5: UI/UX & Responsive Layouts -->
+                    <article class="p-7 rounded-2xl border border-white/[0.08] bg-[#111217] hover:border-[#C6F432]/50 hover:-translate-y-2 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-xl bg-[#C6F432]/10 border border-[#C6F432]/20 flex items-center justify-center text-[#C6F432] text-2xl mb-6 group-hover:scale-110 group-hover:bg-[#C6F432] group-hover:text-[#0E0F13] transition-all duration-300">
+                            <i class="devicon-figma-plain"></i>
+                        </div>
+                        <h3 class="font-[Bricolage_Grotesque] text-xl font-bold text-[#EDEDEA] group-hover:text-[#C6F432] transition">
+                            UI/UX Prototyping & Layouts
+                        </h3>
+                        <p class="mt-3 text-sm leading-relaxed text-[#A9A9A4]">
+                            Transforming design wireframes into pixel-perfect web interfaces with modern dark mode aesthetic, typography harmony, and fluid responsiveness.
+                        </p>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-white/5 border border-white/10 text-gray-300">Figma</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-white/5 border border-white/10 text-gray-300">Dark Themes</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-white/5 border border-white/10 text-gray-300">Responsive UI</span>
+                        </div>
+                    </article>
+
+                    <!-- Service 6: Version Control & Clean Code -->
+                    <article class="p-7 rounded-2xl border border-white/[0.08] bg-[#111217] hover:border-[#C6F432]/50 hover:-translate-y-2 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-xl bg-[#C6F432]/10 border border-[#C6F432]/20 flex items-center justify-center text-[#C6F432] text-2xl mb-6 group-hover:scale-110 group-hover:bg-[#C6F432] group-hover:text-[#0E0F13] transition-all duration-300">
+                            <i class="devicon-git-plain"></i>
+                        </div>
+                        <h3 class="font-[Bricolage_Grotesque] text-xl font-bold text-[#EDEDEA] group-hover:text-[#C6F432] transition">
+                            Git & Version Control
+                        </h3>
+                        <p class="mt-3 text-sm leading-relaxed text-[#A9A9A4]">
+                            Maintaining version history, managing repositories, branching strategies, and documenting codebases cleanly through Git and GitHub.
+                        </p>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-white/5 border border-white/10 text-gray-300">Git</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-white/5 border border-white/10 text-gray-300">GitHub</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-white/5 border border-white/10 text-gray-300">Clean Code</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="px-6 py-20 md:px-10 lg:px-16 border-t border-white/10">
+            <div class="max-w-screen-2xl mx-auto">
+                <!-- Section Header -->
+                <div class="mb-14">
+                    <div class="flex items-center gap-3 mb-5">
+                        <span class="w-2.5 h-2.5 rounded-full bg-[#C6F432]"></span>
+                        <p class="text-xs uppercase tracking-[0.25em] text-[#A9A9A4] font-semibold">
+                            Get To Know Me
+                        </p>
+                    </div>
+
+                    <h2 class="font-[Bricolage_Grotesque] text-4xl md:text-6xl font-bold tracking-tight">
+                        About <span class="text-[#C6F432]">Sakuna Thejan.</span>
+                    </h2>
+                </div>
+
+                <!-- Content Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <!-- Left: Profile Image & Status -->
+                    <div class="lg:col-span-5 flex flex-col items-center">
+                        <div class="relative w-full max-w-sm group">
+                            <!-- Ambient Glow -->
+                            <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-[#C6F432]/30 to-emerald-500/20 blur-xl opacity-75 group-hover:opacity-100 transition duration-500"></div>
+
+                            <!-- Image Container -->
+                            <div class="relative overflow-hidden rounded-3xl border border-white/15 bg-[#15161B] p-2">
+                                <img src="./Assets/my-image.jpeg" alt="Sakuna Thejan"
+                                    class="w-full h-[400px] object-cover rounded-2xl grayscale contrast-125 group-hover:grayscale-0 transition duration-500" />
+                                
+                                <!-- Floating Badge -->
+                                <div class="absolute bottom-5 left-5 right-5 p-3 rounded-xl bg-[#0E0F13]/90 backdrop-blur-md border border-white/10 flex items-center gap-3">
+                                    <span class="w-3 h-3 rounded-full bg-[#C6F432] shadow-[0_0_8px_#C6F432]"></span>
+                                    <div>
+                                        <p class="text-xs font-bold text-[#EDEDEA]">Software Engineering Student</p>
+                                        <p class="text-[11px] text-[#A9A9A4]">ICET Diploma Program</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Meta Info -->
+                        <div class="mt-6 w-full max-w-sm grid grid-cols-2 gap-3 text-center">
+                            <div class="p-3 rounded-xl border border-white/10 bg-[#111217]">
+                                <p class="text-[11px] uppercase tracking-wider text-[#A9A9A4]">Location</p>
+                                <p class="mt-1 text-sm font-semibold text-[#EDEDEA]">Sri Lanka 🇱🇰</p>
+                            </div>
+                            <div class="p-3 rounded-xl border border-white/10 bg-[#111217]">
+                                <p class="text-[11px] uppercase tracking-wider text-[#A9A9A4]">Education</p>
+                                <p class="mt-1 text-sm font-semibold text-[#C6F432]">ICET Diploma</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Story, Highlights & Skills -->
+                    <div class="lg:col-span-7 flex flex-col justify-center">
+                        <h3 class="font-[Bricolage_Grotesque] text-2xl md:text-3xl font-bold leading-snug text-[#EDEDEA]">
+                            Passionate about writing clean code, solving real problems, and continuously learning new technologies.
+                        </h3>
+
+                        <div class="mt-6 space-y-4 text-base leading-relaxed text-[#A9A9A4]">
+                            <p>
+                                Hello! I'm <span class="text-[#EDEDEA] font-semibold">Sakuna Thejan</span>, an enthusiastic software engineering student currently pursuing the Diploma in Software Engineering at <span class="text-[#C6F432] font-semibold">ICET (Institute of Computer Engineering Technology)</span>.
+                            </p>
+                            <p>
+                                My journey into computing began with a deep curiosity about how websites and systems work behind the scenes. Over time, that curiosity has turned into dedicated study in core computer science concepts, object-oriented programming in <span class="text-[#EDEDEA] font-semibold">Java</span>, relational databases with <span class="text-[#EDEDEA] font-semibold">MySQL</span>, and modern frontend development with <span class="text-[#EDEDEA] font-semibold">HTML, CSS/Tailwind, and JavaScript</span>.
+                            </p>
+                            <p>
+                                When I’m not coding or working on coursework projects, I love exploring emerging web frameworks, experimenting with software architectures, and collaborating on open-source repositories.
+                            </p>
+                        </div>
+
+                        <!-- Highlights Counters -->
+                        <div class="mt-8 grid grid-cols-3 gap-4 border-y border-white/10 py-6">
                             <div>
-                                <h1 class="text-5xl md:text-7xl font-bold tracking-tight">
-                                    Things I've
-                                    <span class="text-[#C6F432]">built.</span>
-                                </h1>
+                                <span class="font-[Bricolage_Grotesque] text-3xl md:text-4xl font-extrabold text-[#C6F432]">10+</span>
+                                <p class="mt-1 text-xs md:text-sm text-[#A9A9A4]">Coursework & Personal Projects</p>
+                            </div>
+                            <div>
+                                <span class="font-[Bricolage_Grotesque] text-3xl md:text-4xl font-extrabold text-[#C6F432]">1+</span>
+                                <p class="mt-1 text-xs md:text-sm text-[#A9A9A4]">Years of Consistent Coding</p>
+                            </div>
+                            <div>
+                                <span class="font-[Bricolage_Grotesque] text-3xl md:text-4xl font-extrabold text-[#C6F432]">100%</span>
+                                <p class="mt-1 text-xs md:text-sm text-[#A9A9A4]">Dedication to Growth</p>
+                            </div>
+                        </div>
 
-                                <p class="mt-5 max-w-xl text-base md:text-lg leading-relaxed text-[#A9A9A4]">
-                                    A collection of projects, experiments, and ideas
-                                    I've brought to life while growing as a software
-                                    engineer.
-                                </p>
+                        <!-- CTA Actions -->
+                        <div class="mt-8 flex flex-wrap items-center gap-4">
+                            <a href="#contact"
+                                class="inline-flex items-center gap-2 rounded-full bg-[#C6F432] px-6 py-3 text-sm font-bold text-[#0E0F13] transition duration-300 hover:scale-105 hover:bg-[#b0dc24]">
+                                Work With Me
+                                <span>↗</span>
+                            </a>
+                            <a href="https://github.com/sakunathejan" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-white transition duration-300 hover:border-[#C6F432] hover:text-[#C6F432]">
+                                Visit GitHub Profile
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="px-6 py-20 md:px-10 lg:px-16 bg-[#111217]/50 border-t border-white/10">
+            <div class="max-w-screen-2xl mx-auto">
+                <!-- Section Header -->
+                <div class="mb-14">
+                    <div class="flex items-center gap-3 mb-5">
+                        <span class="w-2.5 h-2.5 rounded-full bg-[#C6F432]"></span>
+                        <p class="text-xs uppercase tracking-[0.25em] text-[#A9A9A4] font-semibold">
+                            Get In Touch
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+                        <div>
+                            <h2 class="font-[Bricolage_Grotesque] text-4xl md:text-6xl font-bold tracking-tight">
+                                Let’s <span class="text-[#C6F432]">Connect.</span>
+                            </h2>
+                            <p class="mt-4 max-w-xl text-base md:text-lg leading-relaxed text-[#A9A9A4]">
+                                Have a question, want to collaborate on a project, or discuss an internship role? Leave a message below!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                    <!-- Contact Info (Left) -->
+                    <div class="lg:col-span-5 flex flex-col justify-between p-8 rounded-2xl border border-white/10 bg-[#111217]">
+                        <div>
+                            <h3 class="font-[Bricolage_Grotesque] text-2xl font-bold text-[#EDEDEA]">
+                                Contact Information
+                            </h3>
+                            <p class="mt-2 text-sm text-[#A9A9A4] leading-relaxed">
+                                I am currently open for junior developer roles, internships, and student project collaborations. Reach out anytime!
+                            </p>
+
+                            <!-- Info List -->
+                            <div class="mt-8 space-y-6">
+                                <!-- Email -->
+                                <div class="flex items-center gap-4">
+                                    <div class="w-10 h-10 rounded-xl bg-[#C6F432]/10 border border-[#C6F432]/20 flex items-center justify-center text-[#C6F432] shrink-0">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs uppercase tracking-wider text-[#A9A9A4]">Email Me</p>
+                                        <a href="mailto:sakunathejan@gmail.com" class="text-sm font-semibold text-[#EDEDEA] hover:text-[#C6F432] transition">
+                                            sakunathejan@gmail.com
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Location -->
+                                <div class="flex items-center gap-4">
+                                    <div class="w-10 h-10 rounded-xl bg-[#C6F432]/10 border border-[#C6F432]/20 flex items-center justify-center text-[#C6F432] shrink-0">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs uppercase tracking-wider text-[#A9A9A4]">Location</p>
+                                        <p class="text-sm font-semibold text-[#EDEDEA]">Colombo, Sri Lanka</p>
+                                    </div>
+                                </div>
+
+                                <!-- Status -->
+                                <div class="flex items-center gap-4">
+                                    <div class="w-10 h-10 rounded-xl bg-[#C6F432]/10 border border-[#C6F432]/20 flex items-center justify-center text-[#C6F432] shrink-0">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs uppercase tracking-wider text-[#A9A9A4]">Availability</p>
+                                        <p class="text-sm font-semibold text-[#C6F432]">Open to Projects & Internships</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Links -->
+                        <div class="mt-10 pt-6 border-t border-white/10">
+                            <p class="text-xs uppercase tracking-wider text-[#A9A9A4] mb-3">Connect On Social</p>
+                            <div class="flex items-center gap-3">
+                                <a href="https://github.com/sakunathejan" target="_blank" rel="noopener noreferrer"
+                                    class="w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-lg text-gray-300 hover:text-[#0E0F13] hover:bg-[#C6F432] hover:border-[#C6F432] transition"
+                                    aria-label="GitHub Profile">
+                                    <i class="devicon-github-original"></i>
+                                </a>
+                                <a href="https://linkedin.com/in/sakunathejan" target="_blank" rel="noopener noreferrer"
+                                    class="w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-lg text-gray-300 hover:text-[#0E0F13] hover:bg-[#C6F432] hover:border-[#C6F432] transition"
+                                    aria-label="LinkedIn Profile">
+                                    <i class="devicon-linkedin-plain"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form (Right) -->
+                    <div class="lg:col-span-7 p-8 rounded-2xl border border-white/10 bg-[#111217]">
+                        <h3 class="font-[Bricolage_Grotesque] text-2xl font-bold text-[#EDEDEA] mb-6">
+                            Send Me a Message
+                        </h3>
+
+                        <!-- Form Feedback Notification Alert -->
+                        <div id="form-feedback" class="hidden mb-6 p-4 rounded-xl border text-sm font-medium transition-all duration-300">
+                        </div>
+
+                        <form id="contact-form" class="space-y-5">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <!-- Name Input -->
+                                <div>
+                                    <label for="user-name" class="block text-xs uppercase tracking-wider text-[#A9A9A4] mb-2 font-medium">
+                                        Your Name <span class="text-[#C6F432]">*</span>
+                                    </label>
+                                    <input type="text" id="user-name" name="name" required placeholder="John Doe"
+                                        class="w-full px-4 py-3 rounded-xl bg-[#0E0F13] border border-white/10 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-[#C6F432] focus:ring-1 focus:ring-[#C6F432] transition" />
+                                </div>
+
+                                <!-- Email Input -->
+                                <div>
+                                    <label for="user-email" class="block text-xs uppercase tracking-wider text-[#A9A9A4] mb-2 font-medium">
+                                        Your Email <span class="text-[#C6F432]">*</span>
+                                    </label>
+                                    <input type="email" id="user-email" name="email" required placeholder="john@example.com"
+                                        class="w-full px-4 py-3 rounded-xl bg-[#0E0F13] border border-white/10 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-[#C6F432] focus:ring-1 focus:ring-[#C6F432] transition" />
+                                </div>
                             </div>
 
-                            <p class="text-sm text-[#A9A9A4]">
-                                <span class="text-[#EDEDEA]">03</span>
-                                &nbsp; Projects
-                            </p>
+                            <!-- Subject Input -->
+                            <div>
+                                <label for="user-subject" class="block text-xs uppercase tracking-wider text-[#A9A9A4] mb-2 font-medium">
+                                    Subject <span class="text-[#C6F432]">*</span>
+                                </label>
+                                <input type="text" id="user-subject" name="subject" required placeholder="Project Collaboration / Internship"
+                                    class="w-full px-4 py-3 rounded-xl bg-[#0E0F13] border border-white/10 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-[#C6F432] focus:ring-1 focus:ring-[#C6F432] transition" />
+                            </div>
 
-                        </div>
+                            <!-- Message Textarea -->
+                            <div>
+                                <label for="user-message" class="block text-xs uppercase tracking-wider text-[#A9A9A4] mb-2 font-medium">
+                                    Message <span class="text-[#C6F432]">*</span>
+                                </label>
+                                <textarea id="user-message" name="message" rows="5" required placeholder="Hello Sakuna, I would like to talk about..."
+                                    class="w-full px-4 py-3 rounded-xl bg-[#0E0F13] border border-white/10 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-[#C6F432] focus:ring-1 focus:ring-[#C6F432] transition resize-y"></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" id="submit-btn"
+                                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#C6F432] text-[#0E0F13] font-bold text-sm tracking-wide transition duration-300 hover:scale-105 hover:bg-[#b0dc24] cursor-pointer">
+                                <span>Send Message</span>
+                                <span>↗</span>
+                            </button>
+                        </form>
                     </div>
-
-
-                    <!-- Projects Grid -->
-                    <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-
-
-                    </div>
-
-
-                    <!-- Bottom Section -->
-                    <div id="bottom-section" class="mt-12 flex flex-col sm:flex-row
-                        items-start sm:items-center justify-between gap-4
-                        border-t border-white/10 pt-7">
-
-                        <p class="text-sm text-[#A9A9A4]">
-                            Always building. Always learning.
-                        </p>
-
-
-
-                    </div>
-
                 </div>
+            </div>
+        </section>
+    </main>
 
-            </section>
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-[#0E0F13] text-[#A9A9A4] py-12 px-6 md:px-10 lg:px-16">
+        <div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <!-- Left Info -->
+            <div class="text-center md:text-left">
+                <a href="./index.html" class="inline-block text-2xl font-bold tracking-wide text-white">
+                    SAKUNA<span class="text-[#C6F432]">.</span>
+                </a>
+                <p class="mt-2 text-xs text-gray-400 max-w-sm">
+                    Turning ideas into useful software and digital experiences. Student at ICET.
+                </p>
+            </div>
+
+            <!-- Footer Navigation Links -->
+            <ul class="flex flex-wrap items-center justify-center gap-6 text-sm">
+                <li><a href="#projects" class="hover:text-[#C6F432] transition">Work</a></li>
+                <li><a href="#services" class="hover:text-[#C6F432] transition">Services</a></li>
+                <li><a href="#about" class="hover:text-[#C6F432] transition">About</a></li>
+                <li><a href="#contact" class="hover:text-[#C6F432] transition">Contact</a></li>
+            </ul>
+
+            <!-- Right: Copyright & Top link -->
+            <div class="flex items-center gap-4 text-xs">
+                <p>&copy; 2026 Sakuna Thejan. All rights reserved.</p>
+                <a href="#" class="p-2 rounded-full border border-white/10 hover:border-[#C6F432] hover:text-[#C6F432] transition" title="Back to top" aria-label="Back to top">
+                    ↑
+                </a>
+            </div>
         </div>
+    </footer>
 
-        
-
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <script src="./JS/app.js"></script>
+    <!-- App JavaScript -->
+    <script src="./JS/app.js"></script>
 </body>
 
 </html>
